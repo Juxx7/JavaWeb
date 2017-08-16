@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <f:view>
+
+
+            <h:form>
+                <h1><h:outputText value="Create/Edit"/></h1>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="ProductCode:" for="productCode" />
+                    <h:inputText id="productCode" value="#{pro.p.productCode}" title="ProductCode" required="true" requiredMessage="The ProductCode field is required."/>
+                    <h:outputLabel value="ProductName:" for="productName" />
+                    <h:inputText id="productName" value="#{pro.p.productName}" title="ProductName" required="true" requiredMessage="The ProductName field is required."/>
+                    <h:outputLabel value="ProductScale:" for="productScale" />
+                    <h:inputText id="productScale" value="#{pro.p.productScale}" title="ProductScale" required="true" requiredMessage="The ProductScale field is required."/>
+                    <h:outputLabel value="ProductVendor:" for="productVendor" />
+                    <h:inputText id="productVendor" value="#{pro.p.productVendor}" title="ProductVendor" required="true" requiredMessage="The ProductVendor field is required."/>
+                    <h:outputLabel value="ProductDescription:" for="productDescription" />
+                    <h:inputTextarea rows="4" cols="30" id="productDescription" value="#{pro.p.productDescription}" title="ProductDescription" required="true" requiredMessage="The ProductDescription field is required."/>
+                    <h:outputLabel value="QuantityInStock:" for="quantityInStock" />
+                    <h:inputText id="quantityInStock" value="#{pro.p.quantityInStock}" title="QuantityInStock" required="true" requiredMessage="The QuantityInStock field is required."/>
+                    <h:outputLabel value="BuyPrice:" for="buyPrice" />
+                    <h:inputText id="buyPrice" value="#{pro.p.buyPrice}" title="BuyPrice" required="true" requiredMessage="The BuyPrice field is required."/>
+                    <h:outputLabel value="Msrp:" for="msrp" />
+                    <h:inputText id="msrp" value="#{pro.p.msrp}" title="Msrp" required="true" requiredMessage="The Msrp field is required."/>
+                    <h:outputLabel value="ProductLine:" for="productLine" />
+                    <h:selectOneMenu id="productLine" value="#{pro.p.productLine}" title="ProductLine" required="true" requiredMessage="The ProductLine field is required.">
+                        <!-- TODO: update below reference to list of available items-->
+                        <f:selectItems value="#{fixme}"/>
+                    </h:selectOneMenu>
+                     <h:commandButton value="save" action="#{pro.add()}" type="submit"></h:commandButton>
+                </h:panelGrid>
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
+
