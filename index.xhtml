@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        Hello from Facelets
+        <h:form>
+                <h1><h:outputText value="Create/Edit"/></h1>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="CustomerNumber:" for="customerNumber" />
+                    <h:inputText id="customerNumber" value="#{cust.c.customerNumber}" title="CustomerNumber" required="true" requiredMessage="The CustomerNumber field is required."/>
+                    <h:outputLabel value="CustomerName:" for="customerName" />
+                    <h:inputText id="customerName" value="#{cust.c.customerName}" title="CustomerName" required="true" requiredMessage="The CustomerName field is required."/>
+                    <h:outputLabel value="ContactLastName:" for="contactLastName" />
+                    <h:inputText id="contactLastName" value="#{cust.c.contactLastName}" title="ContactLastName" required="true" requiredMessage="The ContactLastName field is required."/>
+                    <h:outputLabel value="ContactFirstName:" for="contactFirstName" />
+                    <h:inputText id="contactFirstName" value="#{cust.c.contactFirstName}" title="ContactFirstName" required="true" requiredMessage="The ContactFirstName field is required."/>
+                    <h:outputLabel value="Phone:" for="phone" />
+                    <h:inputText id="phone" value="#{cust.c.phone}" title="Phone" required="true" requiredMessage="The Phone field is required."/>
+                    <h:outputLabel value="AddressLine1:" for="addressLine1" />
+                    <h:inputText id="addressLine1" value="#{cust.c.addressLine1}" title="AddressLine1" required="true" requiredMessage="The AddressLine1 field is required."/>
+                    <h:outputLabel value="AddressLine2:" for="addressLine2" />
+                    <h:inputText id="addressLine2" value="#{cust.c.addressLine2}" title="AddressLine2" />
+                    <h:outputLabel value="City:" for="city" />
+                    <h:inputText id="city" value="#{cust.c.city}" title="City" required="true" requiredMessage="The City field is required."/>
+                    <h:outputLabel value="State:" for="state" />
+                    <h:inputText id="state" value="#{cust.c.state}" title="State" />
+                    <h:outputLabel value="PostalCode:" for="postalCode" />
+                    <h:inputText id="postalCode" value="#{cust.c.postalCode}" title="PostalCode" />
+                    <h:outputLabel value="Country:" for="country" />
+                    <h:inputText id="country" value="#{cust.c.country}" title="Country" required="true" requiredMessage="The Country field is required."/>
+                    <h:outputLabel value="CreditLimit:" for="creditLimit" />
+                    <h:inputText id="creditLimit" value="#{cust.c.creditLimit}" title="CreditLimit" />
+                    <h:outputLabel value="SalesRepEmployeeNumber:" for="salesRepEmployeeNumber" />
+                    <h:selectOneMenu id="salesRepEmployeeNumber" value="#{cust.c.salesRepEmployeeNumber}" title="SalesRepEmployeeNumber" >
+                        <!-- TODO: update below reference to list of available items-->
+                       
+                    </h:selectOneMenu>
+                    <h:commandButton value="save" action="#{cust.add()}"></h:commandButton>
+                </h:panelGrid>
+            </h:form>
+    </h:body>
+</html>
+

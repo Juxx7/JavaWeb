@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        Hello from Facelets<f:view>
+
+
+            <h:form>
+                <h1><h:outputText value="Create/Edit"/></h1>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="OfficeCode:" for="officeCode" />
+                    <h:inputText id="officeCode" value="#{off.o.officeCode}" title="OfficeCode" required="true" requiredMessage="The OfficeCode field is required."/>
+                    <h:outputLabel value="City:" for="city" />
+                    <h:inputText id="city" value="#{off.o.city}" title="City" required="true" requiredMessage="The City field is required."/>
+                    <h:outputLabel value="Phone:" for="phone" />
+                    <h:inputText id="phone" value="#{off.o.phone}" title="Phone" required="true" requiredMessage="The Phone field is required."/>
+                    <h:outputLabel value="AddressLine1:" for="addressLine1" />
+                    <h:inputText id="addressLine1" value="#{off.o.addressLine1}" title="AddressLine1" required="true" requiredMessage="The AddressLine1 field is required."/>
+                    <h:outputLabel value="AddressLine2:" for="addressLine2" />
+                    <h:inputText id="addressLine2" value="#{off.o.addressLine2}" title="AddressLine2" />
+                    <h:outputLabel value="State:" for="state" />
+                    <h:inputText id="state" value="#{off.o.state}" title="State" />
+                    <h:outputLabel value="Country:" for="country" />
+                    <h:inputText id="country" value="#{off.o.country}" title="Country" required="true" requiredMessage="The Country field is required."/>
+                    <h:outputLabel value="PostalCode:" for="postalCode" />
+                    <h:inputText id="postalCode" value="#{off.o.postalCode}" title="PostalCode" required="true" requiredMessage="The PostalCode field is required."/>
+                    <h:outputLabel value="Territory:" for="territory" />
+                    <h:inputText id="territory" value="#{off.o.territory}" title="Territory" required="true" requiredMessage="The Territory field is required."/>
+                     <h:commandButton value="save" action="#{off.add()}" type="submit"></h:commandButton>
+                </h:panelGrid>
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
+

@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        Hello from Facelets<f:view>
+
+
+            <h:form>
+                <h1><h:outputText value="Create/Edit"/></h1>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="EmployeeNumber:" for="employeeNumber" />
+                    <h:inputText id="employeeNumber" value="#{emp.e.employeeNumber}" title="EmployeeNumber" required="true" requiredMessage="The EmployeeNumber field is required."/>
+                    <h:outputLabel value="LastName:" for="lastName" />
+                    <h:inputText id="lastName" value="#{emp.e.lastName}" title="LastName" required="true" requiredMessage="The LastName field is required."/>
+                    <h:outputLabel value="FirstName:" for="firstName" />
+                    <h:inputText id="firstName" value="#{emp.e.firstName}" title="FirstName" required="true" requiredMessage="The FirstName field is required."/>
+                    <h:outputLabel value="Extension:" for="extension" />
+                    <h:inputText id="extension" value="#{emp.e.extension}" title="Extension" required="true" requiredMessage="The Extension field is required."/>
+                    <h:outputLabel value="Email:" for="email" />
+                    <h:inputText id="email" value="#{emp.e.email}" title="Email" required="true" requiredMessage="The Email field is required."/>
+                    <h:outputLabel value="JobTitle:" for="jobTitle" />
+                    <h:inputText id="jobTitle" value="#{emp.e.jobTitle}" title="JobTitle" required="true" requiredMessage="The JobTitle field is required."/>
+                    <h:outputLabel value="ReportsTo:" for="reportsTo" />
+                    <h:selectOneMenu id="reportsTo" value="#{emp.e.reportsTo}" title="ReportsTo" requiredMessage="The reportsTo field is required.">
+                        <!-- TODO: update below reference to list of available items-->
+                        <f:selectItems value="#{fixme}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="OfficeCode:" for="officeCode" />
+                    <h:selectOneMenu id="officeCode" value="#{emp.e.officeCode}" title="OfficeCode" required="false" requiredMessage="The OfficeCode field is required.">
+                        <!-- TODO: update below reference to list of available items-->
+                        <f:selectItems value="#{fixme}"/>
+                    </h:selectOneMenu>
+                   <h:commandButton value="save" action="#{emp.add()}" type="submit"></h:commandButton>
+                </h:panelGrid>
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
+
